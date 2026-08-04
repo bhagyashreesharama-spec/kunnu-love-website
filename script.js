@@ -1,90 +1,112 @@
-// GIFT OPEN ANIMATION
+
+// =================================
+// OPEN GIFT BUTTON
+// =================================
 
 
-const gift =
-document.getElementById("bigGift");
+const openGiftBtn = document.getElementById("openGift");
 
-
-const openBtn =
-document.getElementById("openGiftBtn");
-
-
-
-if(openBtn){
-
-
-openBtn.addEventListener("click",()=>{
-
-
-gift.classList.add("open");
+const magicWorld = document.getElementById("magicWorld");
 
 
 
-openBtn.innerHTML=
-"✨ Gift Opened ✨";
+if(openGiftBtn){
+
+
+openGiftBtn.addEventListener("click",()=>{
+
+
+magicWorld.scrollIntoView({
+
+behavior:"smooth"
+
+});
 
 
 });
 
 
 }
-// MEMORY GIFT CLICK EFFECT
-
-
-const memoryGifts =
-document.querySelectorAll(".memoryGift");
 
 
 
-memoryGifts.forEach((gift)=>{
+
+
+
+// =================================
+// GIFT BOX CLICK EFFECT
+// =================================
+
+
+const gifts = document.querySelectorAll(".memoryGift");
+
+
+
+gifts.forEach((gift)=>{
+
+
+const quote = gift.querySelector(".quote");
+
+
+quote.style.display="none";
+
 
 
 gift.addEventListener("click",()=>{
 
 
-gift.classList.toggle("opened");
+if(quote.style.display==="none"){
 
 
-
-gift.style.transform=
-"scale(1.08)";
+quote.style.display="block";
 
 
+gift.style.transform="scale(1.08)";
 
-setTimeout(()=>{
 
-gift.style.transform="";
+gift.innerHTML += " ✨";
 
-},500);
 
+}
+
+else{
+
+
+quote.style.display="none";
+
+
+gift.style.transform="scale(1)";
+
+
+}
 
 
 });
 
 
 });
-// LOVE LETTER TYPE EFFECT
-
-
-const letterButton =
-document.getElementById("openLetter");
-
-
-const letterBox =
-document.getElementById("letterBox");
-
-
-const letterText =
-document.getElementById("letterText");
 
 
 
-const message =
 
-"You came into my life like a beautiful surprise. \
-Thank you for every smile, every conversation and every moment. \
-You are someone who makes ordinary days feel special. \
-I hope this little world always reminds you how much you mean to me. 💖";
+
+
+// =================================
+// LETTER OPEN
+// =================================
+
+
+const letterButton = document.getElementById("letterButton");
+
+const letterBox = document.getElementById("letterBox");
+
+const letterText = document.getElementById("letterText");
+
+
+
+const message = 
+"Thank you for being a beautiful part of my life. ❤️ You bring smiles, comfort and happiness. Every little moment with you becomes a special memory. Always keep smiling and remember that you are truly special. 💖";
+
 
 
 
@@ -97,24 +119,26 @@ letterButton.addEventListener("click",()=>{
 letterBox.style.display="block";
 
 
-let index=0;
-
-
 letterText.innerHTML="";
+
+
+let i=0;
 
 
 
 function typing(){
 
 
-if(index < message.length){
+if(i < message.length){
 
 
-letterText.innerHTML += message[index];
+letterText.innerHTML += message.charAt(i);
 
-index++;
 
-setTimeout(typing,60);
+i++;
+
+
+setTimeout(typing,40);
 
 
 }
@@ -127,82 +151,85 @@ setTimeout(typing,60);
 typing();
 
 
+
 });
 
 }
-// MUSIC CONTROL
 
 
-const music =
-document.getElementById("bgMusic");
-
-
-const musicBtn =
-document.getElementById("musicBtn");
+ 
 
 
 
-let playing=false;
+// =================================
+// FINAL SURPRISE
+// =================================
+
+
+const surpriseButton =
+document.getElementById("surpriseButton");
+
+
+const finalMessage =
+document.getElementById("finalMessage");
 
 
 
-if(musicBtn){
+if(surpriseButton){
 
 
-musicBtn.addEventListener("click",()=>{
+surpriseButton.addEventListener("click",()=>{
 
 
-if(!playing){
+finalMessage.style.display="block";
 
 
-music.play();
+finalMessage.innerHTML=
 
+"💖 You are one of the most beautiful chapters of my story. Keep smiling always. 🌸";
 
-musicBtn.innerHTML=
-"🔇 Pause Music";
-
-
-playing=true;
-
-
-}
-
-else{
-
-
-music.pause();
-
-
-musicBtn.innerHTML=
-"🎵 Play Music";
-
-
-playing=false;
-
-
-}
 
 
 });
 
 
 }
-// OPEN MEMORY GIFT
-
-
-function openMemory(box){
-
-
-const message =
-box.nextElementSibling;
-
-
-message.classList.toggle("show");
 
 
 
-box.innerHTML =
-"✨🎁✨";
+
+
+// =================================
+// SCROLL REVEAL
+// =================================
+
+
+const sections =
+document.querySelectorAll("section");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+sections.forEach((sec)=>{
+
+
+let position =
+sec.getBoundingClientRect().top;
+
+
+
+if(position < window.innerHeight - 100){
+
+
+sec.style.opacity="1";
 
 
 }
+
+
+});
+
+
+});

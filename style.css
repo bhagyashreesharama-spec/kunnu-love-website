@@ -300,3 +300,192 @@ transform:translateY(-20px);
 }
 
 }
+/* =================================
+MUSIC WORLD
+================================= */
+
+
+.guitar{
+
+position:absolute;
+
+left:8%;
+
+bottom:120px;
+
+font-size:100px;
+
+animation:guitarMove 4s infinite;
+
+}
+
+
+
+.piano{
+
+position:absolute;
+
+right:10%;
+
+bottom:130px;
+
+font-size:100px;
+
+animation:pianoMove 3s infinite;
+
+}
+
+
+
+.violin{
+
+position:absolute;
+
+left:25%;
+
+top:35%;
+
+font-size:90px;
+
+animation:violinMove 5s infinite;
+
+}
+
+
+
+/* MUSIC NOTES */
+
+
+.musicNotes span{
+
+position:absolute;
+
+font-size:45px;
+
+color:white;
+
+animation:noteFloat 4s infinite;
+
+}
+
+
+.musicNotes span:nth-child(1){
+
+left:15%;
+
+bottom:250px;
+
+animation-delay:1s;
+
+}
+
+
+.musicNotes span:nth-child(2){
+
+right:25%;
+
+bottom:280px;
+
+animation-delay:2s;
+
+}
+
+
+.musicNotes span:nth-child(3){
+
+left:40%;
+
+top:30%;
+
+animation-delay:3s;
+
+}
+
+
+.musicNotes span:nth-child(4){
+
+right:15%;
+
+top:40%;
+
+animation-delay:1.5s;
+
+}
+
+
+
+/* ANIMATIONS */
+
+
+@keyframes guitarMove{
+
+50%{
+
+transform:
+
+translateY(-20px)
+rotate(5deg);
+
+}
+
+}
+
+
+
+@keyframes pianoMove{
+
+50%{
+
+transform:
+
+translateY(-15px);
+
+}
+
+}
+
+
+
+@keyframes violinMove{
+
+50%{
+
+transform:
+
+rotate(-8deg)
+translateY(-20px);
+
+}
+
+}
+
+
+
+@keyframes noteFloat{
+
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+opacity:0;
+
+transform:translateY(-80px);
+
+}
+
+}

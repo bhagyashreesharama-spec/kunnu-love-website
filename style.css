@@ -1015,3 +1015,14 @@ display:none;
 display:none;
 
 }
+/* MOBILE BUTTON TOUCH FIX */
+
+button{
+
+-webkit-tap-highlight-color: transparent;
+
+touch-action: manipulation;
+
+cursor:pointer;
+
+}

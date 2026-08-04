@@ -233,23 +233,7 @@ sec.style.opacity="1";
 
 
 });
-const openButton =
-document.getElementById("openGift");
 
-
-openButton.addEventListener("click",()=>{
-
-
-document.querySelector(".magicLocked").style.display="flex";
-
-document.querySelector(".giftLocked").style.display="flex";
-
-document.querySelector(".letterLocked").style.display="flex";
-
-document.querySelector(".finalLocked").style.display="flex";
-
-
-});
 // OPEN ALL SECTIONS AFTER GIFT CLICK
 
 const openButton = document.getElementById("openGift");

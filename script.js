@@ -250,3 +250,33 @@ document.querySelector(".finalLocked").style.display="flex";
 
 
 });
+// OPEN ALL SECTIONS AFTER GIFT CLICK
+
+const openButton = document.getElementById("openGift");
+
+
+if(openButton){
+
+openButton.addEventListener("click",()=>{
+
+
+document.querySelector(".magicLocked").style.display="flex";
+
+document.querySelector(".giftLocked").style.display="flex";
+
+document.querySelector(".letterLocked").style.display="flex";
+
+document.querySelector(".finalLocked").style.display="flex";
+
+
+document.getElementById("magicWorld")
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+});
+
+}

@@ -1005,3 +1005,13 @@ font-size:32px;
 display:none;
 
 }
+/* Hidden pages until gift opens */
+
+.magicLocked,
+.giftLocked,
+.letterLocked,
+.finalLocked{
+
+display:none;
+
+}

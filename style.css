@@ -930,3 +930,182 @@ line-height:2;
 color:#555;
 
 }
+/* =================================
+MOON ENDING
+================================= */
+
+
+.moonEnding{
+
+min-height:100vh;
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+180deg,
+#1b234f,
+#4b6cb7
+);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+
+.moon{
+
+font-size:180px;
+
+animation:moonGlow 3s infinite;
+
+}
+
+
+
+@keyframes moonGlow{
+
+
+50%{
+
+filter:
+
+drop-shadow(
+0 0 50px #fff
+);
+
+transform:scale(1.1);
+
+}
+
+}
+
+
+
+/* STARS */
+
+
+.stars span{
+
+position:absolute;
+
+font-size:35px;
+
+animation:starTwinkle 2s infinite;
+
+}
+
+
+
+.stars span:nth-child(1){
+
+top:15%;
+
+left:20%;
+
+}
+
+
+.stars span:nth-child(2){
+
+top:30%;
+
+right:20%;
+
+}
+
+
+.stars span:nth-child(3){
+
+bottom:25%;
+
+left:15%;
+
+}
+
+
+.stars span:nth-child(4){
+
+bottom:20%;
+
+right:30%;
+
+}
+
+
+.stars span:nth-child(5){
+
+top:10%;
+
+right:40%;
+
+}
+
+
+
+@keyframes starTwinkle{
+
+
+50%{
+
+opacity:.3;
+
+transform:scale(1.5);
+
+}
+
+}
+
+
+
+.finalMessage{
+
+position:absolute;
+
+max-width:700px;
+
+padding:30px;
+
+}
+
+
+
+.finalMessage h1{
+
+font-family:'Pacifico',cursive;
+
+font-size:45px;
+
+}
+
+
+
+.finalMessage p{
+
+margin:25px;
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+
+
+.finalMessage h2{
+
+color:#ffd6ec;
+
+}

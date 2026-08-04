@@ -28,3 +28,38 @@ openBtn.innerHTML=
 
 
 }
+// MEMORY GIFT CLICK EFFECT
+
+
+const memoryGifts =
+document.querySelectorAll(".memoryGift");
+
+
+
+memoryGifts.forEach((gift)=>{
+
+
+gift.addEventListener("click",()=>{
+
+
+gift.classList.toggle("opened");
+
+
+
+gift.style.transform=
+"scale(1.08)";
+
+
+
+setTimeout(()=>{
+
+gift.style.transform="";
+
+},500);
+
+
+
+});
+
+
+});

@@ -1537,3 +1537,60 @@ opacity:0;
 }
 
 }
+/* ================================
+MUSIC BUTTON
+================================ */
+
+
+.musicButton{
+
+position:fixed;
+
+top:25px;
+
+right:25px;
+
+z-index:999;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+border:none;
+
+background:
+
+linear-gradient(
+135deg,
+#ff9ad5,
+#8fdcff
+);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+box-shadow:
+
+0 10px 30px rgba(255,105,180,.35);
+
+animation:
+
+musicFloat 3s infinite;
+
+}
+
+
+
+@keyframes musicFloat{
+
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}

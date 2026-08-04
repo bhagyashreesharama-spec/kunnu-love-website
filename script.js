@@ -187,3 +187,22 @@ playing=false;
 
 
 }
+// OPEN MEMORY GIFT
+
+
+function openMemory(box){
+
+
+const message =
+box.nextElementSibling;
+
+
+message.classList.toggle("show");
+
+
+
+box.innerHTML =
+"✨🎁✨";
+
+
+}

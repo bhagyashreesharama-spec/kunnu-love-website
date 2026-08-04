@@ -280,3 +280,14 @@ behavior:"smooth"
 });
 
 }
+// MOBILE TOUCH BUTTON FIX 💖
+
+document.querySelectorAll("button").forEach((btn)=>{
+
+btn.addEventListener("touchstart", function(){
+
+this.click();
+
+});
+
+});
